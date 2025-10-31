@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Task Tracker</h1>
+
+    <form id="task-form" aria-label="Add new task">
+      <input id="task-input" type="text" placeholder="Add a new task..." aria-label="Task description" required />
+      <button type="submit" id="add-btn">Add</button>
+    </form>
+
+    <section aria-live="polite" class="counts">
+      <div id="pending-count">Pending: 0</div>
+      <div id="completed-count">Completed: 0</div>
+    </section>
+
+    <ul id="task-list" class="task-list" aria-label="Task list"></ul>
+
+    <div class="controls">
+      <button id="clear-completed">Clear completed</button>
+      <button id="clear-all">Clear all</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
