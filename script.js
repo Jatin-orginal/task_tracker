@@ -1,4 +1,4 @@
-// Simple task tracker with localStorage persistence
+
 const form = document.getElementById('task-form');
 const input = document.getElementById('task-input');
 const list = document.getElementById('task-list');
@@ -30,7 +30,7 @@ clearAllBtn.addEventListener('click', () => {
   saveAndRender();
 });
 
-// Functions
+
 
 function addTask(text){
   const task = {
@@ -39,7 +39,7 @@ function addTask(text){
     completed: false,
     createdAt: Date.now()
   };
-  // Pending tasks at front
+  
   tasks = [task, ...tasks.filter(t => !t.completed), ...tasks.filter(t => t.completed)];
   saveAndRender();
 }
@@ -59,9 +59,9 @@ function deleteTask(id){
 }
 
 function render(){
-  // Clear
+  
   list.innerHTML = '';
-  // Render tasks in order (pending first, completed at end)
+  
   tasks.forEach(task => {
     const li = document.createElement('li');
     li.className = 'task-item';
